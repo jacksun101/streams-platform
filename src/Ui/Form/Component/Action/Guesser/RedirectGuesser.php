@@ -72,7 +72,7 @@ class RedirectGuesser
 
                 case 'save_and_edit':
                 case 'save_and_continue':
-                    $action['redirect'] = $section->getHref('edit/{request.route.parameters.id}');
+                    $action['redirect'] = $section->getHref('edit/' . $builder->getFormEntryId());
                     break;
 
                 case 'save_and_edit_next':

@@ -170,4 +170,26 @@ class MultipleFormBuilder extends FormBuilder
 
         return $builder->getFormEntryId();
     }
+
+    /**
+     * Get the entry of the first child entry form
+     * This will be the default entry for this class
+     *
+     * @return mixed
+     */
+    public function getFormEntry()
+    {
+        return $this->forms->first()->getFormEntry();
+    }
+
+    /**
+     * Get the entry ID of the first child entry form
+     * This will be the default entry ID for this class
+     *
+     * @return int|null
+     */
+    public function getFormEntryId()
+    {
+        return $this->forms->first()->getFormEntryId();
+    }
 }
